@@ -1,4 +1,4 @@
-# Switch Themes 
+# Themes Switch
 
 :star: Aplicação desenvolvida com Typescript
 
