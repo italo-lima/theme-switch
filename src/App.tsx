@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useCallback } from "react";
+import { ThemeProvider, DefaultTheme } from "styled-components";
+
+import Header from "./components/Header";
+import userPersistedState from "./utils/userPersistedState";
+import GlobalStyles from "./styles/global";
+import light from "./styles/themes/light";
+import dark from "./styles/themes/dark";
 
 function App() {
+  const [theme, setTheme] = userPersistedState<DefaultTheme>("theme", light);
+
+  const toggleTheme = useCallback(() => {
+    setTheme(theme.title === "light" ? dark : light);
+  }, [theme.title, setTheme]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Header toggleTheme={toggleTheme} />
+      <GlobalStyles />
+    </ThemeProvider>
   );
 }
 
