@@ -1,4 +1,6 @@
-import { useState, useEffect, Dispatch, SetStateAction } from "react";
+import {
+  useState, useEffect, Dispatch, SetStateAction,
+} from 'react';
 
 type Response<T> = [T, Dispatch<SetStateAction<T>>];
 
@@ -8,9 +10,8 @@ function UsePersistedState<T>(key: string, initialState: T): Response<T> {
 
     if (storageValue) {
       return JSON.parse(storageValue);
-    } else {
-      return initialState;
     }
+    return initialState;
   });
 
   useEffect(() => {

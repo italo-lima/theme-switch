@@ -1,27 +1,39 @@
-# Themes Switch
+<h4 align="center">
+  🚀 Theme Switch
+</h4>
 
-:star: Aplicação desenvolvida com Typescript
+<p align="center">
+  <a href="#-technology">Technology</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-executing">Executing</a>&nbsp;&nbsp;&nbsp;
+</p>
 
-:arrow_right: Status: Finalizada :wrench:
+<p align="center">
+  <img alt="Theme" src="./.github/theme.gif" height="425" />
+</p>
 
-:triangular_flag_on_post: Descrição: Aplicação com possibilidade para troca de themes
+## :rocket: Technology
 
-# :arrow_forward: Como iniciar Aplicação
+:point_down: This project was developed with: :point_down:
 
-No terminal, navegue até o endereço no qual deseja salvar o projeto e clone utilizando a url abaixo
+-  [ReactJS](https://nodejs.org/en)
+-  [Typescript](https://www.typescriptlang.org/)
+-  [Styled Components](https://styled-components.com/)
+-  [Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 
-`git clone https://github.com/italo-lima/theme-switch.git`
+## 🔖 Project
 
-Entre na pasta do projeto
+Application that allows you to change themes according to the user's desire and save your choice in local storage
 
-`cd themeswitch`
+## 💻 Executing
 
-Instale as dependências do projeto
-
-`yarn` ou `npm install`
-
-Execute aplicação
-
-`yarn start` ou `npm start start`
-
-Pronto, agora é possível utilizar [LocalHost](http://localhost:3000) na porta 3000.
+```bash
+# Clone this project
+$ git clone https://github.com/italo-lima/theme-switch.git
+# Join folder
+$ cd themeswitch
+# Install dependencies
+$ yarn
+# Run application
+$ yarn start
+```
